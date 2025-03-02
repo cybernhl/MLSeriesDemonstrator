@@ -3,13 +3,17 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "30.0.3"
+    compileSdkVersion 35
+
+    buildFeatures {
+        mlModelBinding true
+    }
 
     defaultConfig {
+        namespace "com.example.mlseriesdemonstrator"
         applicationId "com.example.mlseriesdemonstrator"
         minSdkVersion 23
-        targetSdkVersion 31
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
 
@@ -26,13 +30,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
-    buildFeatures {
-        mlModelBinding true
-    }
+
 }
 
 dependencies {
